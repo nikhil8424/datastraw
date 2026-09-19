@@ -3,6 +3,7 @@
 A high-velocity, lightweight Customer Support Ticketing CRM built for support engineering and operations teams. Built with **Python + FastAPI**, **SQLite (SQLAlchemy)**, and **HTML/CSS/Tailwind UI** from Stitch design system (*Precision Support Desk*).
 
 ---
+https://datastraw-production-27d1.up.railway.app/
 
 ## 🚀 Features
 
