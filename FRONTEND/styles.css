@@ -1,0 +1,126 @@
+/* DataStraw Support CRM - Design System (Precision Support Desk) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+:root {
+  /* Surface & Background */
+  --surface: #faf8ff;
+  --surface-dim: #d2d9f4;
+  --surface-bright: #faf8ff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f2f3ff;
+  --surface-container: #eaedff;
+  --surface-container-high: #e2e7ff;
+  --surface-container-highest: #dae2fd;
+  --background: #faf8ff;
+
+  /* Text & Contrast Hierarchy */
+  --on-surface: #131b2e;
+  --on-surface-variant: #434655;
+  --inverse-surface: #283044;
+  --inverse-on-surface: #eef0ff;
+  --outline: #737686;
+  --outline-variant: #c3c6d7;
+
+  /* Primary Brand */
+  --primary: #004ac6;
+  --primary-container: #2563eb;
+  --on-primary: #ffffff;
+  --on-primary-container: #eeefff;
+  --primary-fixed: #dbe1ff;
+  --primary-fixed-dim: #b4c5ff;
+  --on-primary-fixed: #00174b;
+  --on-primary-fixed-variant: #003ea8;
+
+  /* Secondary */
+  --secondary: #3755c3;
+  --secondary-container: #708cfd;
+  --on-secondary: #ffffff;
+  --on-secondary-container: #00217a;
+  --secondary-fixed: #dde1ff;
+  --secondary-fixed-dim: #b8c4ff;
+  --on-secondary-fixed: #001453;
+  --on-secondary-fixed-variant: #173bab;
+
+  /* Semantic Alerts / Tertiary */
+  --tertiary: #943700;
+  --tertiary-container: #bc4800;
+  --on-tertiary: #ffffff;
+  --on-tertiary-container: #ffede6;
+  --tertiary-fixed: #ffdbcd;
+  --tertiary-fixed-dim: #ffb596;
+  --on-tertiary-fixed: #360f00;
+  --on-tertiary-fixed-variant: #7d2d00;
+
+  /* Error & Success */
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error: #ffffff;
+  --on-error-container: #93000a;
+  --success: #059669;
+  --success-bg: #ecfdf5;
+
+  /* Layout & Spacing */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(15, 23, 42, 0.09), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+}
+
+/* Global resets & typography */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--background);
+  color: var(--on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, kbd, samp, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Operational Status Tokens */
+.badge-open {
+  background-color: var(--tertiary-fixed);
+  color: var(--on-tertiary-fixed);
+}
+.badge-in-progress {
+  background-color: var(--primary-fixed);
+  color: var(--on-primary-fixed);
+}
+.badge-closed {
+  background-color: var(--secondary-fixed);
+  color: var(--on-secondary-fixed);
+}
+
+/* Interactive transitions */
+.ticket-row {
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ticket-row:hover {
+  background-color: rgba(242, 243, 255, 0.8);
+}

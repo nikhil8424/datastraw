@@ -1,0 +1,469 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed": "#dde1ff",
+          "on-surface-variant": "#434655",
+          "secondary": "#3755c3",
+          "secondary-fixed-dim": "#b8c4ff",
+          "inverse-primary": "#b4c5ff",
+          "on-secondary-container": "#00217a",
+          "on-tertiary-container": "#ffede6",
+          "secondary-container": "#708cfd",
+          "on-primary-fixed": "#00174b",
+          "outline-variant": "#c3c6d7",
+          "surface-tint": "#0053db",
+          "on-secondary": "#ffffff",
+          "on-secondary-fixed-variant": "#173bab",
+          "surface-container-highest": "#dae2fd",
+          "primary-fixed-dim": "#b4c5ff",
+          "on-tertiary-fixed-variant": "#7d2d00",
+          "error": "#ba1a1a",
+          "background": "#faf8ff",
+          "tertiary-fixed": "#ffdbcd",
+          "surface-variant": "#dae2fd",
+          "primary-container": "#2563eb",
+          "on-background": "#131b2e",
+          "inverse-surface": "#283044",
+          "surface-container-high": "#e2e7ff",
+          "on-error": "#ffffff",
+          "tertiary-fixed-dim": "#ffb596",
+          "primary-fixed": "#dbe1ff",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "inverse-on-surface": "#eef0ff",
+          "on-tertiary-fixed": "#360f00",
+          "on-error-container": "#93000a",
+          "surface-bright": "#faf8ff",
+          "tertiary-container": "#bc4800",
+          "on-secondary-fixed": "#001453",
+          "on-surface": "#131b2e",
+          "error-container": "#ffdad6",
+          "tertiary": "#943700",
+          "surface-container": "#eaedff",
+          "surface-dim": "#d2d9f4",
+          "on-primary": "#ffffff",
+          "outline": "#737686",
+          "on-primary-fixed-variant": "#003ea8",
+          "surface-container-low": "#f2f3ff",
+          "surface": "#faf8ff",
+          "primary": "#004ac6",
+          "on-primary-container": "#eeefff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter": "1rem",
+          "margin-desktop": "1.5rem",
+          "space-xs": "0.5rem",
+          "space-xl": "1.5rem",
+          "space-lg": "1.25rem",
+          "gutter-desktop": "1.5rem",
+          "space-2xl": "2rem",
+          "space-sm": "0.75rem",
+          "margin": "1rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "code-sm": [
+            "JetBrains Mono"
+          ],
+          "headline-xl": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "code-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-xl": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "fontWeight": "700"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "15px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      }
+    }
+  }</script>  <link rel="stylesheet" href="styles.css">
+</head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface-container-lowest border-r border-outline-variant/50 z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md border-b border-outline-variant/30"><div class="flex items-center gap-space-xs"><div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm shadow-sm">D</div><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">DataStraw</span><span class="ml-auto font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed uppercase tracking-wider">CRM</span></div><div class="mt-space-sm flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] text-primary">dns</span><span class="">Support Desk</span></div></div><div class="px-space-sm pt-space-md"><p class="px-space-xs pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Workspace</p><nav class="space-y-1" data-active-classes="bg-surface-container-low text-primary font-semibold"><a aria-current="page" class="group flex items-center justify-between px-space-sm py-2 rounded-lg transition-colors bg-surface-container-low text-primary font-semibold" data-path="tickets" href="index.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">confirmation_number</span><span class="">Tickets</span></div><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">5 active</span></a><a class="group flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="dashboard" href="index.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="">Dashboard</span></div></a></nav></div></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-lowest"><div class="px-space-xs py-1 flex items-center justify-between mb-space-sm"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-emerald-100"></span><span class="font-label-sm text-label-sm text-on-surface-variant">System Operational</span></div><div class="flex items-center gap-1"><a class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="help" href="index.html" title="Help"><span class="material-symbols-outlined text-[18px]">help_outline</span></a><a class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="settings" href="index.html" title="Settings"><span class="material-symbols-outlined text-[18px]">settings</span></a></div></div><div class="flex items-center gap-space-sm p-space-xs rounded-lg hover:bg-surface-container-low transition-colors"><div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center font-semibold text-[13px] flex-shrink-0">SA</div><div class="flex-1 min-w-0"><div class="flex items-center justify-between"><span class="font-label-md text-label-md font-semibold text-on-surface truncate">Support Agent</span><span class="font-label-sm text-[10px] px-1.5 py-0.2 rounded-full bg-emerald-100 text-emerald-800 font-semibold">Online</span></div><p class="font-body-sm text-label-sm text-on-surface-variant truncate">agent@datastraw.com</p></div></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/40 z-40 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-space-xs font-body-sm text-body-sm"><span class="text-on-surface-variant">Support Workspace</span><span class="material-symbols-outlined text-outline text-[16px]">chevron_right</span><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tickets</span></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg border border-outline-variant bg-surface text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-outline">search</span><span class="text-outline text-label-md font-body-sm pr-space-lg">Search tickets, users...</span><kbd class="font-code-sm text-code-sm bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant border border-outline-variant/60">⌘K</kbd></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md font-medium transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span class="">New Ticket</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-14 bg-background min-h-screen p-space-2xl"><div class="flex flex-col w-full max-w-5xl mx-auto pb-space-2xl">
+<!-- Interactive Form and Feedback Container -->
+<div class="flex flex-col gap-space-lg">
+<!-- Top Navigation & Return Action -->
+<div class="flex flex-col gap-1">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span class="hover:text-primary cursor-pointer transition-colors">Workspace</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary cursor-pointer transition-colors" href="index.html">Tickets</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="font-semibold text-on-surface">New Ticket</span>
+</nav>
+<div class="mt-2 flex items-center justify-between">
+<div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors mb-1.5 group" href="index.html">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+<span class="">Back to Tickets</span>
+</a>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Create New Ticket</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Log a support request for a customer.</p>
+</div>
+<!-- Operational Metadata Tag -->
+
+</div>
+</div>
+<!-- Main Creation Form Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl md:p-space-2xl">
+<form class="space-y-space-lg" id="ticket-form" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Customer Name -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-medium text-on-surface" for="cust-name">
+              Customer Name <span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:bg-surface-container-low transition-all" id="cust-name" name="customer_name" placeholder="Enter customer name" type="text" value="Rahul Sharma">
+</div>
+</div>
+<!-- Customer Email -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-medium text-on-surface" for="cust-email">
+              Customer Email <span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:bg-surface-container-low transition-all" id="cust-email" name="customer_email" placeholder="customer@example.com" type="email" value="rahul.sharma@nexusflow.io">
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span class="">We'll send ticket confirmation and updates to this address</span>
+</p>
+</div>
+</div>
+<!-- Issue Title -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-medium text-on-surface" for="issue-title">
+            Issue Title <span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]">subject</span>
+</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:bg-surface-container-low transition-all" id="issue-title" name="issue_title" placeholder="Briefly describe the issue" type="text" value="Order not delivered (#DS-8921)">
+</div>
+</div>
+<!-- Description Textarea -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block font-label-md text-label-md font-medium text-on-surface" for="issue-desc">
+              Description <span class="text-error font-bold">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline">Markdown supported</span>
+</div>
+<textarea class="w-full p-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:bg-surface-container-low transition-all" id="issue-desc" name="description" placeholder="Provide detailed information about the customer's issue..." rows="5">Customer placed order #DS-8921 on Sep 16. Tracking status has not updated since 48 hours. Express shipment SLA breached.</textarea>
+</div>
+<!-- Automated Meta Details Pill -->
+<div class="flex items-start sm:items-center gap-2.5 p-space-sm rounded-lg bg-surface-container text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 sm:mt-0">auto_awesome</span>
+<span class="">Ticket ID, status (<span class="font-semibold text-primary">Open</span>), and creation timestamps are automatically generated upon save.</span>
+</div>
+<!-- Form Actions -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-lg bg-surface-container-lowest">
+
+<div class="flex items-center gap-space-sm ml-auto">
+<button class="px-4 py-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg transition-colors" type="button">
+              Cancel
+            </button>
+<button class="px-5 py-2 bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold rounded-lg shadow-sm flex items-center gap-2 transition-all active:scale-[0.99]" id="submit-action-btn" onclick="submitTicket()" type="button">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+<span id="submit-btn-label" class="">Create Ticket</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+<!-- State Showcase & Validation Previews Section -->
+<div class="mt-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-outline uppercase">Component Architecture &amp; States</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Interactive State Previews</h2>
+</div>
+<span class="font-code-sm text-code-sm px-2.5 py-1 bg-surface-container-high text-on-surface rounded-full">DataStraw UI Kit</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- 1. Inline Validation Errors Showcase -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm">
+<div>
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">1. Validation Error State</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Invalid</span>
+</div>
+<div class="space-y-2 mt-2">
+<div>
+<label class="block font-label-sm text-label-sm text-error font-medium">Customer Email *</label>
+<div class="relative mt-1">
+<input class="w-full pl-2.5 pr-8 py-1.5 bg-error-container/20 text-error font-body-sm text-body-sm rounded-lg focus:outline-none" readonly="" type="text" value="rahul.invalid-email">
+<span class="material-symbols-outlined absolute right-2 top-2 text-error text-[16px]">error</span>
+</div>
+<span class="font-label-sm text-label-sm text-error flex items-center gap-1 mt-1">
+                  Please enter a valid email address.
+                </span>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-error font-medium">Customer Name *</label>
+<div class="relative mt-1">
+<input class="w-full pl-2.5 pr-8 py-1.5 bg-error-container/20 text-error font-body-sm text-body-sm rounded-lg focus:outline-none" placeholder="e.g. Maya Lin" readonly="" type="text">
+<span class="material-symbols-outlined absolute right-2 top-2 text-error text-[16px]">priority_high</span>
+</div>
+<span class="font-label-sm text-label-sm text-error flex items-center gap-1 mt-1">
+                  Customer name is required.
+                </span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2">Immediate visual feedback on field blur and submission attempts.</p>
+</div>
+<!-- 2. Submitting Button Variant -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm">
+<div>
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">2. Async Pending State</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Processing</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col items-center justify-center gap-3 my-2">
+<button class="px-5 py-2.5 bg-primary/80 text-on-primary font-label-md text-label-md font-semibold rounded-lg shadow-sm flex items-center gap-2 cursor-not-allowed opacity-90 w-full justify-center" disabled="" type="button">
+<svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-on-primary" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+<span class="">Creating Ticket...</span>
+</button>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Lock UI to prevent duplicates</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2">Graceful inline spinners preserve dimensional consistency across actions.</p>
+</div>
+<!-- 3. Success Toast Notification -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-space-sm">
+<div>
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">3. Dispatch Notification</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm">Dispatched</span>
+</div>
+<div class="p-space-sm rounded-lg bg-emerald-50 text-emerald-900 shadow-sm flex items-start gap-2.5 my-2">
+<span class="material-symbols-outlined text-emerald-600 text-[20px] mt-0.5">check_circle</span>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md font-semibold text-emerald-900">Success!</p>
+<p class="font-body-sm text-body-sm text-emerald-700 leading-snug">Ticket <span class="font-code-sm text-code-sm font-bold">TKT-005</span> created successfully. Redirecting...</p>
+</div>
+<span class="material-symbols-outlined text-emerald-500 text-[16px] cursor-pointer hover:text-emerald-700">close</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2">System toast updates CRM event log and automatically forwards agent.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Dynamic Simulated Feedback Toast (Hidden by default) -->
+<div class="fixed bottom-6 right-6 hidden transform transition-all duration-300 z-50" id="live-toast">
+<div class="flex items-center gap-3 bg-inverse-surface text-inverse-on-surface px-space-md py-3 rounded-lg shadow-xl">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Ticket TKT-005 created successfully</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80">Customer notified via confirmation email.</span>
+</div>
+<button class="ml-2 text-inverse-on-surface/60 hover:text-inverse-on-surface" onclick="document.getElementById('live-toast').classList.add('hidden')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Micro-interaction logic for live preview -->
+
+<script>
+  async function submitTicket() {
+    const nameInput = document.getElementById('cust-name');
+    const emailInput = document.getElementById('cust-email');
+    const titleInput = document.getElementById('issue-title');
+    const descInput = document.getElementById('issue-desc');
+    const btn = document.getElementById('submit-action-btn');
+    const label = document.getElementById('submit-btn-label');
+    const toast = document.getElementById('live-toast');
+
+    const name = (nameInput.value || '').trim();
+    const email = (emailInput.value || '').trim();
+    const subject = (titleInput.value || '').trim();
+    const description = (descInput.value || '').trim();
+
+    // Client-side validation
+    if (!name) {
+      nameInput.focus();
+      return;
+    }
+    if (!email || !email.includes('@')) {
+      emailInput.focus();
+      return;
+    }
+    if (!subject) {
+      titleInput.focus();
+      return;
+    }
+    if (!description) {
+      descInput.focus();
+      return;
+    }
+
+    // Set loading state
+    btn.disabled = true;
+    btn.classList.add('opacity-80', 'cursor-not-allowed');
+    label.innerHTML = `
+      <span class="flex items-center gap-2">
+        <svg class="animate-spin h-4 w-4 text-on-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        Creating Ticket...
+      </span>
+    `;
+
+    try {
+      const res = await fetch('/api/tickets', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          customer_name: name,
+          customer_email: email,
+          subject: subject,
+          description: description
+        })
+      });
+
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        throw new Error(errorData.detail || 'Failed to create ticket');
+      }
+
+      const data = await res.json();
+
+      // Show toast
+      const toastTitle = toast.querySelector('.font-label-md');
+      if (toastTitle) toastTitle.textContent = `Ticket ${data.ticket_id} created successfully`;
+      toast.classList.remove('hidden');
+
+      setTimeout(() => {
+        window.location.href = `ticket-details.html?id=${encodeURIComponent(data.ticket_id)}`;
+      }, 1200);
+
+    } catch (err) {
+      console.error(err);
+      alert(err.message || 'Error creating ticket');
+      btn.disabled = false;
+      btn.classList.remove('opacity-80', 'cursor-not-allowed');
+      label.innerText = 'Create Ticket';
+    }
+  }
+
+  // Cancel button wiring
+  document.querySelectorAll('button').forEach(b => {
+    if (b.textContent.trim() === 'Cancel') {
+      b.addEventListener('click', () => { window.location.href = 'index.html'; });
+    }
+  });
+</script>
+</main></div>
+</body></html>
